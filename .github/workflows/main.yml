@@ -1,0 +1,35 @@
+name: Deploy app no github pages
+
+on: 
+  push:
+    branches: 
+      - master
+      
+jobs:
+  web-deploy:
+
+    name: Deploy take-client
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Obter última versão do código
+      uses: actions/checkout@v2.3.2
+
+    - name: Setup do Node.js 14 LTS
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+      
+    - name: Instalar pacotes npm
+      run: npm install
+
+    - name: Build  do projeto
+      run: npm run build-prod
+      
+#    - name: Executar testes
+#      run: npm run test
+      
+    - name: Publicar app no github pages
+      env:
+        token: ${{ secrets.GH_TOKEN }}
+      run: npx angular-cli-ghpages --dir=dist/take --no-silent --repo=https://$token@github.com/pedromontemor/take-client.git --name=\"pedromontemor\" --email=\"p.montemorfaria@gmail.com\"

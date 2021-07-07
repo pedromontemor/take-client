@@ -1,0 +1,25 @@
+.icon-container {
+    background : #dee8ec;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    img {
+        width: 32px;
+    }
+
+    &.blue {
+        background: #2cc3d5;
+    }
+
+    &.green {
+        background: #4dcb7b;
+    }
+
+    &.purple {
+        background: #517bf2;
+    }
+}

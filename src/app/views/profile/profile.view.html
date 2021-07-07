@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="d-flex align-items-center">
+        <app-icon icon="assets/img/blip.png"></app-icon>
+        <div class="flex-grow-1">
+            <h2>{{contact.name}}</h2>
+            <span>Id: {{contact.shortName}}</span>
+        </div>
+        <span>Created at: {{contact.created | date: 'dd/MM/yyyy'}}</span>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="col-md-5 mb-4">
+                    <div class="card p-4 h-100">
+                        <app-field label="Region and idiom" value="EUA - English (EN)"></app-field>
+                        <app-field label="Timezone" value="(UTC - 03:00) Brasília"></app-field>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <app-card-field label="Usuários ativos" [value]="contact.analytics.user.actived" icon="assets/img/user.png" theme="blue">
+                    </app-card-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-4">
+                    <app-card-field label="Mensagens recebidas" [value]="contact.analytics.message.received" icon="assets/img/union.png" theme="green">
+                    </app-card-field>
+                </div>
+                <div class="col-md-5 mb-4">
+                    <app-card-field label="Mensagens enviadas" [value]="contact.analytics.message.sent" icon="assets/img/sent.png" theme="purple">
+                    </app-card-field>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <img src="assets/img/plano.png" width="100%" />
+            <a class="btn btn-primary">Update account</a>
+        </div>
+    </div>
+</div>

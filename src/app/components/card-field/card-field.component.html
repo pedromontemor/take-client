@@ -1,0 +1,9 @@
+<div class="card-field-item card p-4 pt-5 pb-5">
+    <div class="icon-container mr-4" *ngIf="icon" [ngClass]="getClass()">
+        <img src="{{icon}}" />
+    </div>
+    <div>
+        <div class="card-item-value">{{value}}</div>
+        <div class="card-item-label">{{label}}</div>
+    </div>
+</div>

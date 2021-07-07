@@ -1,0 +1,28 @@
+.contact-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contact-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        width: inherit;
+    }
+}
+
+.contact-item-grid {
+    .contact-image {
+        width: 64px;
+        height: 64px;
+    }
+
+    .contact-name {
+        font-weight: bold;
+        text-align: center;
+    }
+}

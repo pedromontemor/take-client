@@ -1,0 +1,24 @@
+@import './assets/variables.scss';
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+
+
+body {
+    background: #f5f8f9;
+    color: #56616e;
+    font-family: Nunito;
+}
+
+.navbar {
+    background: #192437;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 8px rgba(0,0,0,.08);
+    border-radius: 8px;
+}
+
+.btn {
+    color: #fff;
+}

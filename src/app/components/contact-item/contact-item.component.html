@@ -1,0 +1,20 @@
+<div class="contact-item-row d-flex align-items-center mb-3" *ngIf="mode == 'list'">
+    <a *ngIf="item.favorite" class="mr-3" (click)=disfavor()><img src="assets/img/star.png" /></a>
+    <a *ngIf="!item.favorite" class="mr-3" (click)=favorite()><img src="assets/img/favorite.png" /></a>
+    <a class="contact-row card p-3 w-100" href="profile/{{item.shortName}}">
+        <div class="contact-image mr-3"><img [src]="item.image" /></div>
+        <div class="flex-grow-1"><b>{{item.name}}</b></div>
+        <div>Created at {{item.created | date: 'dd/MM/yyyy'}}</div>
+    </a>
+</div>
+<div class="contact-item-grid col pb-3 h-100" *ngIf="mode == 'grid'">
+    <div class="card p-2 h-100 justify-content-center">
+        <a *ngIf="item.favorite" class="mr-3" (click)=disfavor()><img src="assets/img/star.png" /></a>
+        <a *ngIf="!item.favorite" class="mr-3" (click)=favorite()><img src="assets/img/favorite.png" /></a>
+        <a href="profile/{{item.shortName}}">
+            <div class="contact-image mx-auto mb-3"><img [src]="item.image" /></div>
+            <div class="contact-name flex-grow-1">{{item.name}}</div>
+            <div class="text-center flex-grow-1 mb-3">{{item.shortName}}</div>
+        </a>
+    </div>
+</div>
