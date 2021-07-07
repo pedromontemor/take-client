@@ -22,6 +22,6 @@ Acessar a url:https://pedromontemor.github.io/take-client/
 
 A aplicação client consome a API abaixo:
 
-Url: https://take-server-55n5n4qg6-pedromontemor.vercel.app/
+Url: https://take-server.vercel.app/
 
 Repositório: https://github.com/pedromontemor/take-server
