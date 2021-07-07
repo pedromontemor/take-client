@@ -1,27 +1,27 @@
-# TakeClient
+# Take client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+[![Deploy app no github pages](https://github.com/pedromontemor/levarme-client/actions/workflows/main.yml/badge.svg)](https://github.com/pedromontemor/levarme-client/actions/workflows/main.yml)
 
-## Development server
+Projeto desenvolvido em [Angular](https://github.com/angular/angular-cli) versão 12.1.0.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Instalando a aplicação
 
-## Code scaffolding
+Executar comando `npm install` para instalar os pacotes necessários para rodar a aplicação. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Executando a aplicação
 
-## Build
+Executar comando `ng serve` para iniciar o servidor de desenvolvimento. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Url: http://localhost:4200/.
 
-## Running unit tests
+## Acessando publicação da aplicação
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Acessar a url:https://pedromontemor.github.io/take-client/
 
-## Running end-to-end tests
+## API
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+A aplicação client consome a API abaixo:
 
-## Further help
+Url: https://take-server-55n5n4qg6-pedromontemor.vercel.app/
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Repositório: https://github.com/pedromontemor/take-server
