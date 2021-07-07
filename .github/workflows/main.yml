@@ -32,4 +32,4 @@ jobs:
     - name: Publicar app no github pages
       env:
         token: ${{ secrets.GH_TOKEN }}
-      run: npx angular-cli-ghpages --dir=dist/take --no-silent --repo=https://$token@github.com/pedromontemor/take-client.git --name=\"pedromontemor\" --email=\"p.montemorfaria@gmail.com\"
+      run: npx angular-cli-ghpages --dir=dist/take-client --no-silent --repo=https://$token@github.com/pedromontemor/take-client.git --name=\"pedromontemor\" --email=\"p.montemorfaria@gmail.com\"
