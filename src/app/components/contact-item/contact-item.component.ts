@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IContact } from 'src/app/models/IContact';
+import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
     selector: 'app-contact-item',
@@ -13,17 +14,17 @@ export class ContactItemComponent implements OnInit {
     @Input() item: IContact = <IContact>{};
     @Input() mode: string = "row";
 
-    constructor() { }
+    constructor(public contactService: ContactService) { }
 
     ngOnInit() {
     }
 
     favorite() {
-        this.item.favorite = true;
+        this.contactService.favorite(this.item);
     }
 
     disfavor() {
-        this.item.favorite = false;
+        this.contactService.disfavor(this.item);
     }
 
 }

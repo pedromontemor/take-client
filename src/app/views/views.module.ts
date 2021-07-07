@@ -6,6 +6,7 @@ import { ProfileView } from './profile/profile.view';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ComponentsModule } from '../components/components.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -14,6 +15,8 @@ import { ComponentsModule } from '../components/components.module';
     ],
     imports: [
         CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
         NgbModule,
         ComponentsModule
     ],

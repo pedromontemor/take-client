@@ -1,32 +1,36 @@
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col col-md">
             <h2>My chatbots</h2>
         </div>
-        <div class="col-auto">
-            <input type="text" placeholder="Search" class="form-control" />
+        <div class="col-12 col-md mb-3">
+            <form [formGroup]="searchForm" class="">
+                <input type="text" placeholder="Search" class="form-control w-100" formControlName="search"/>
+            </form>
         </div>
-        <div class="col-auto">
-            <button class="btn btn-primary" (click)="orderByName()">Order by name</button>
+        <div class="col-6 col-md-auto">
+            <button class="btn btn-primary w-100" (click)="orderByName()">Order by name</button>
         </div>
-        <div class="col-auto">
-            <a class="btn btn-primary" (click)="orderByCreation()">Order by creation</a>
+        <div class="col-6 col-md-auto mb-3">
+            <a class="btn btn-primary w-100" (click)="orderByCreation()">Order by creation</a>
+        </div>
+        <div class="col col-md-1 mb-3">
             <a (click)="changeViewMode('grid')"><img src="assets/img/organize-blocks.png" /></a>
             <a (click)="changeViewMode('list')"><img src="assets/img/organize-list.png" /></a>
         </div>
     </div>
     <h3>Favorites</h3>
     <div *ngIf="mode == 'list'">
-        <app-contact-item *ngFor="let contact of contacts" [item]="contact" [mode]="mode"></app-contact-item>
+        <app-contact-item *ngFor="let contact of favoriteContacts" [item]="contact" [mode]="mode"></app-contact-item>
     </div>
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2" *ngIf="mode == 'grid'">
-        <app-contact-item *ngFor="let contact of contacts" [item]="contact" [mode]="mode"></app-contact-item>
+        <app-contact-item *ngFor="let contact of favoriteContacts" [item]="contact" [mode]="mode"></app-contact-item>
     </div>
     <hr />
     <div *ngIf="mode == 'list'">
-        <app-contact-item *ngFor="let contact of contacts" [item]="contact" [mode]="mode"></app-contact-item>
+        <app-contact-item *ngFor="let contact of disfavorContacts" [item]="contact" [mode]="mode"></app-contact-item>
     </div>
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2" *ngIf="mode == 'grid'">
-        <app-contact-item *ngFor="let contact of contacts" [item]="contact" [mode]="mode"></app-contact-item>
+        <app-contact-item *ngFor="let contact of disfavorContacts" [item]="contact" [mode]="mode"></app-contact-item>
     </div>
 </div>

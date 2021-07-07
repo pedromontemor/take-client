@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col">
             <div class="row">
-                <div class="col-md-5 mb-4">
+                <div class="col-md-6 col-lg-5 mb-4">
                     <div class="card p-4 h-100">
                         <app-field label="Region and idiom" value="EUA - English (EN)"></app-field>
                         <app-field label="Timezone" value="(UTC - 03:00) Brasília"></app-field>
@@ -27,14 +27,16 @@
                     <app-card-field label="Mensagens recebidas" [value]="contact.analytics.message.received" icon="assets/img/union.png" theme="green">
                     </app-card-field>
                 </div>
-                <div class="col-md-5 mb-4">
+                <div class="col-md-6 col-lg-5 mb-4">
                     <app-card-field label="Mensagens enviadas" [value]="contact.analytics.message.sent" icon="assets/img/sent.png" theme="purple">
                     </app-card-field>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3">
-            <img src="assets/img/plano.png" width="100%" />
+        <div class="text-center col-lg-3">
+            <div>
+                <img class="plan-image" src="assets/img/plano.png" />
+            </div>
             <a class="btn btn-primary">Update account</a>
         </div>
     </div>

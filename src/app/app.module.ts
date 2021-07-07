@@ -8,6 +8,7 @@ import { ViewsModule } from './views/views.module';
 import { ComponentsModule } from './components/components.module';
 import { ServicesModule } from './services/services.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     NgbModule,
     ServicesModule,
