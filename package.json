@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-prod": "ng build --base-href \"https://pedromontemor.github.io/take-client/\"",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
